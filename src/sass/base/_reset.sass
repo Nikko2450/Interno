@@ -46,6 +46,20 @@ html
 *, *:before, *:after
     box-sizing: inherit
 
+a
+  display: block
+  box-sizing: border-box
+  text-decoration: none
+  color: inherit
+  &:hover,
+  &:active,
+  &:visited 
+    text-decoration: none
+
+img 
+  max-width: 100%
+
+
 @media (prefers-reduced-motion: reduce)
     *
         transition: none !important
