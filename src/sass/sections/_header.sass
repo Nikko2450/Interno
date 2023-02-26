@@ -5,8 +5,18 @@
   background-size: cover
   border-bottom-left-radius: 291px
 
+  @media (max-width: $xs )
+    border-radius: 0
+
   &__text
     width: 50%
+
+    @media ( max-width: $md )
+      width: 61%
+
+    @media (max-width: $xs)
+      width: 100%  
+      
 
   &__title
     font-size: 85px
@@ -14,9 +24,22 @@
     margin-bottom: 9px
     color: $c-black
 
+    @media ( max-width: $md )
+      font-size: 68px
+
+    @media (max-width: $sm )
+      font-size: 50px
+
+    @media (max-width: $xs )
+      font-size: 40px
+        
+
   &__desc
     font-size: 22px
     line-height: 150%
     margin-bottom: 21px
     color: $c-black
+
+    @media (max-width: $xs )
+      font-size: 17px
 

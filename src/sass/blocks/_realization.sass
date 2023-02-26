@@ -1,14 +1,27 @@
 .realization
-  padding: 200px 0 200px
+  padding: 200px 0 
+
+  @media  (max-width: $xs)
+      padding: 100px 0
   
   &__container
     display: flex
+
+    @media  (max-width: $xs)
+      flex-wrap: wrap
 
   &__wrapper
     width: calc(100% / 3 - 84px / 3)
 
     &:not(:last-of-type)
         margin-right:  42px
+    
+    @media  (max-width: $xs)
+      width: 100%
+
+      &:not(:last-of-type)
+        margin-bottom: 25px
+        margin-right:  0
 
 
   &__title
@@ -24,6 +37,9 @@
     color: $c-grey
     text-align: center
     margin-bottom: 52px
+
+    @media  (max-width: $xs)
+      margin-bottom: 25px
 
   &__button
     display: flex

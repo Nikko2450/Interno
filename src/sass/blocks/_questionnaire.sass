@@ -4,29 +4,66 @@
   border-radius: 70px
   width: calc( 100% / 3 - 40px / 3 )
 
+  
+
   &:not(:last-of-type)
-        margin-right:  20px
+    margin-right:  20px
+
+  @media (max-width: $sm)
+    width: 100%
+    padding: 40px 30px 45px
+    
+    &:not(:last-of-type)
+      margin-bottom: 20px
+      margin-right: 0
 
   &__hero
     display: flex
     align-items: center
     margin-bottom: 25px
 
+
+    @media (max-width: $md)
+      flex-wrap: wrap
+      justify-content: center
+
   &__img
     margin-right: 23px
     border-radius: 50%
+
+    @media (max-width: $md)
+      width: 50%
+      margin: 0 0 23px
+
+    @media (max-width: $sm)
+     width: auto
+     margin-bottom: 0
+     margin-right: 23px
 
   &__name
     font-size: 25px
     line-height: 150%
     color: $c-black
 
+    @media (max-width: $md)
+      font-size: 21px
+
   &__country
     font-size: 22px
     line-height: 150%
     color: $c-grey
 
+    @media (max-width: $md)
+     font-size: 21px
+
   &__desc
     font-size: 22px
     line-height: 150%
     color: $c-grey
+
+    @media (max-width: $sm)
+      font-size: 19px
+      text-align: center
+      
+
+    

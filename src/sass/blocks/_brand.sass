@@ -1,8 +1,15 @@
 .brand
   padding:  150px 0
+  
+  @media (max-width: $sm)
+    padding: 100px 0
+
 
   &__container
     display: flex
     justify-content: space-between
+
+    @media (max-width: $sm)
+      flex-wrap: wrap
 
     

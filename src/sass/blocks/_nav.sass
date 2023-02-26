@@ -4,11 +4,16 @@
   background-color: #fff
   width: 100%
   position: fixed
+
+  @media (max-width: $md)
+    display: none
+    
   
   &__container
     display: flex
     justify-content: space-between
 
+  
   &__menu
     display: flex
     align-items: center  

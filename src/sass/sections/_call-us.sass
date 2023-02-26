@@ -1,19 +1,35 @@
 .call-us
   padding-bottom: 200px
 
+  @media  (max-width: $xs)
+    padding-bottom: 100px
+
   &__container
     display: flex
     align-items: center
+
+    @media  (max-width: $md)
+      flex-wrap: wrap
 
   &__wrapper
     width: 38%
     margin-right: 75px
 
+    @media  (max-width: $md)
+      width: 100%
+      text-align: center
+      margin-right: 0
+      margin-bottom: 75px
+
+    @media  (max-width: $xs)
+      margin-bottom: 25px
+       
+
   &__title
-    font-size: 50px
-    line-height: 125%
-    color: $c-black
     margin-bottom: 33px
+
+    @media  (max-width: $lg)
+      font-size: 39px
 
   &__desc
     font-size: 22px
@@ -25,6 +41,9 @@
     display: flex
     align-items: center
     margin-bottom: 47px
+
+    @media  (max-width: $md)
+      justify-content: center
 
   &__icon
     justify-content: center
@@ -50,3 +69,9 @@
   &__img
     border-top-right-radius: 326px
     border-bottom-left-radius: 123px
+
+    @media  (max-width: $md)
+      width: 100%
+
+    @media  (max-width: $xs)
+      border-radius: 0
