@@ -1,0 +1,60 @@
+.achievement
+  padding: 150px 0
+  background-color: $c-white
+
+  @media ( max-width:  $xs)
+    padding: 100px 0
+
+  &__container
+    display: flex
+    justify-content: center
+
+    @media ( max-width:  $sm)
+      flex-wrap: wrap
+
+
+  &__data
+    padding: 0 54px
+    text-align: center
+    position: relative
+
+    @media ( max-width:  $sm)
+      width: 50%
+
+    @media ( max-width:  $xs)
+      width: 100%
+      padding: 0 50px
+
+      &:not(:last-of-type)
+        margin-bottom: 25px
+
+
+
+    &:not(:last-of-type)
+      &::after 
+        content: ""
+        background: $c-orange
+        height: 90%
+        width: 1px
+        position: absolute
+        z-index: 2
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+      
+        @media ( max-width:  $sm)
+          content: none
+
+
+
+  &__number
+    font-size: 85px
+    line-height: 125%
+    color: $c-orange
+    margin-bottom: 16px
+
+  &__success
+    font-size: 22px
+    line-height: 150%
+    color: $c-grey
+    
