@@ -1,9 +1,17 @@
 .footer
   padding: 135px 0 46px
 
+  @media (max-width: $sm)
+    padding: 100px 0 40px
   &__wrapper
     display: flex
     justify-content: space-between
+
+    @media (max-width: $md)
+      flex-wrap: wrap
+
+    @media (max-width: $sm)
+      justify-content: space-around
 
   &__desc
     font-size: 22px
@@ -15,6 +23,9 @@
     display: flex
     align-items: center
     margin-top: 31px
+
+    @media (max-width: $sm)
+      justify-content: center
 
   &__icon
 
@@ -58,3 +69,19 @@
     line-height: 150%
     color: $c-grey
     text-align: center
+
+    @media (max-width: $sm)
+      margin-top: 100px
+
+  &__contact
+
+    @media (max-width: $md)
+      margin-top: 25px
+      width: 100%
+      text-align: center
+
+  &__logo
+    @media (max-width: $sm)
+      width: 100%
+      text-align: center
+      margin-bottom: 25px
