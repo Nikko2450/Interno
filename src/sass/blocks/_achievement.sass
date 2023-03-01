@@ -12,7 +12,6 @@
     @media ( max-width:  $sm)
       flex-wrap: wrap
 
-
   &__data
     padding: 0 54px
     text-align: center
@@ -28,10 +27,8 @@
       &:not(:last-of-type)
         margin-bottom: 25px
 
-
-
     &:not(:last-of-type)
-      &::after 
+      &::after
         content: ""
         background: $c-orange
         height: 90%
@@ -41,11 +38,9 @@
         right: 0
         top: 50%
         transform: translateY(-50%)
-      
+
         @media ( max-width:  $sm)
           content: none
-
-
 
   &__number
     font-size: 85px
@@ -57,4 +52,3 @@
     font-size: 22px
     line-height: 150%
     color: $c-grey
-    
