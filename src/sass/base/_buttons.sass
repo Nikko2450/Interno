@@ -1,0 +1,26 @@
+.black-button
+  font-family: 'Jost'
+  font-style: normal
+  display: flex
+  color: $c-fullWhite
+  font-weight: 600
+  font-size: 18px
+  line-height: 125%
+  width: max-content
+  padding: 26px 48px
+  background-color: $c-black
+  border-radius: 18px
+  letter-spacing: 0.02em
+
+  @media (max-width: $sm)
+    padding: 20px 40px
+
+  @media  (max-width: $xs)
+    padding: 20px 30px
+
+  img
+    margin-left: 10px
+
+.orange-button
+  @extend .black-button
+  background-color: $c-orange

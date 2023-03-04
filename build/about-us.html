@@ -1,23 +1,21 @@
-{% import "partials/_mixins.html" as mixins %}
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8"/>
-    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="theme-color" content="#fff"/>
-    <meta name="format-detection" content="telephone=no"/>
+    <meta charset="utf-8" />
+    <title>Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="css/app.css"/>
-    {# {% include "../partials/_media-tags.html" %} #}
+    <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body>
     <nav class="nav">
-      <div class="nav__container container">  
+      <div class="nav__container container">
         <a href="#" class="nav__logo"><img src="img/svgo/header-logo.svg" alt="logo"></a>
         <div class="nav__menu">
           <a href="/home.html" class="nav__link">Home</a>
@@ -32,10 +30,25 @@
     </nav>
     <!-- BEGIN content -->
     <div class="out">
-      {% block content %}{% endblock %}
+      <header class="page-header" style="background-image: url('../img/about-us/header/header-img-1.jpg');">
+        <div class="page-header__container container">
+          <div class="page-header__text">
+            <h1 class="page-header__title heading-1">About Us</h1>
+            <p class="page-header__desc paragraph">Home / About Us</p>
+          </div>
+        </div>
+      </header>
+      <section class="quote">
+        <div class="quote__container container">
+          <div class="quote__text">
+            <p class="quote__subtitle"></p>
+            <h2 class="quote__title heading-2">I like an interior that defies labeling. I don't really want someone to walk into a room and know that I did it</h2>
+            <p class="quote__desc paragraph">-BUNNY WILLIAMS</p>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- END content -->
-
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
@@ -84,7 +97,3 @@
     </footer>
   </body>
 </html>
-
-
-
-
