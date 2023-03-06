@@ -16,7 +16,6 @@
   @media only screen and (min-height: $height + "px")
     @content
 
-
 @mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px)
   #{$property}: #{$max-size}#{$unit}
   #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})))
@@ -24,7 +23,7 @@
     #{$property}: #{$min-size}#{$unit}
   @media (min-width: #{$max-width}#{$unit})
     #{$property}: #{$max-size}#{$unit}
-    
+
 =fs($sizeValue: 16)
   font-size: $sizeValue + px
   font-size: $sizeValue / 10 + rem
@@ -83,12 +82,12 @@
   background-image: linear-gradient(left, $color1, $color2)
 
 // font-family 
-=font($alias, $name)
+=font($alias, $name, $weight, $style: normal)
   @font-face
     font-family: $alias
     src: url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff")
-    font-weight: normal
-    font-style: normal
+    font-weight: $weight
+    font-style: $style
     font-display: swap
 // to use:
 //+font(black, cytiapro-black-webfont)
@@ -110,7 +109,6 @@
 
 =hidetext
   +hide-text
-
 
 // IMPORTANT!!!! REQUIRES SPACES BETWEEN ELEMENTS, NO SUCH STUFF: </li><li>
 =justify
@@ -141,7 +139,6 @@
     content: " "
     display: table
     clear: both
-
 
 =placeholder-color($color)
   &::placeholder
@@ -253,7 +250,7 @@
 
 =better-blur($radius)
   filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='#{$radius}' result='b'/%3E%3CfeMorphology operator='dilate' radius='#{$radius}'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a")
-  
+
 =scale($var)
   transform: scale($var)
 
@@ -268,26 +265,24 @@
   $font-family: null
   @if $name == "l"
     $font-family: "light"
-  font-family: $font-family
-  font-weight: normal
+    font-family: $font-family
+    font-weight: normal
   @if $font-size != null
     font-size: $font-size + px
   @if $letter-spacing != null
     letter-spacing: ($letter-spacing / 1000) + em
 
-
-=font-face($font-family,$alias, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) 
-    @font-face 
-        font-family: $font-family
-        font-weight: $weight
-        font-style: $style
-        src: url("#{$file-path}.eot")
-        src: local("#{$font-family} #{$alias}"), local('#{$font-family}-#{$alias}'),
-        url("#{$file-path}.eot?#iefix") format('embedded-opentype'),
-        url("#{$file-path}.woff") format('woff2'),
-        url("#{$file-path}.woff") format('woff'),
-        url("#{$file-path}.ttf") format('truetype')
-
+// =font-face($font-family,$alias, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+//   @font-face
+//     font-family: $font-family
+//     font-weight: $weight
+//     font-style: $style
+//     src: url("#{$file-path}.eot")
+//     src: local("#{$font-family} #{$alias}"), local('#{$font-family}-#{$alias}'),
+//         url("#{$file-path}.eot?#iefix") format('embedded-opentype'),
+//         url("#{$file-path}.woff") format('woff2'),
+//         url("#{$file-path}.woff") format('woff'),
+//         url("#{$file-path}.ttf") format('truetype')
 
 =center($axis)
   @if $axis == both
