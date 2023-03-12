@@ -1,6 +1,9 @@
 .quote
   padding: 200px 0
 
+  @media  ( max-width: $xs )
+    padding: 100px 0
+
   &__container
     display: flex
     justify-content: center
@@ -8,6 +11,7 @@
   &__wrapper
     position: relative
     padding: 80px 75px
+    width: 76%
 
     &::after
       content: ""
@@ -31,6 +35,10 @@
       border-radius: 70px 0 0 70px
       border-right: 0
 
+    @media (max-width: $xs)
+      width: 100%
+      padding: 50px 50px
+
   &__text
     background-color: $c-fullWhite
 
@@ -38,6 +46,9 @@
     text-align: center
     font-style: italic
     margin-bottom: 34px
+
+    @media  ( max-width: $xs )
+      font-size: 25px
 
   &__desc
     font-size: 25px
