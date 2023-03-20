@@ -9,6 +9,12 @@
     #{$this}__inner
       transform: rotateY(180deg)
 
+  @media (max-width: $md )
+    width: 34%
+
+    &:nth-child(1), &:nth-child(2)
+      margin-bottom: 25px
+
   &__inner
     position: relative
     width: 100%
@@ -28,10 +34,16 @@
     color: white
     transform: rotateY(180deg)
 
+    @media (max-width: $sm)
+      padding: 28px
+
   &__icons
     display: flex
     justify-content: space-around
     margin: 66px 0
+
+    @media (max-width: $sm)
+      margin: 40px 0
 
   &__number
     font-size: 18px
@@ -45,3 +57,16 @@
     height: 100%
     -webkit-backface-visibility: hidden
     backface-visibility: hidden
+
+    @media (max-width: $sm)
+      height: 84%
+
+  &__name
+
+    @media (max-width: $sm)
+      font-size: 20px
+
+  &__country
+
+    @media (max-width: $sm)
+      font-size: 17px
