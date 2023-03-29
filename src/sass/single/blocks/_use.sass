@@ -1,0 +1,44 @@
+.use
+  padding-top: 150px
+
+  &__container
+    display: flex
+    justify-content: space-around
+
+  &__text
+    position: relative
+
+    &:not(:last-of-type)
+      &::after
+        content: ""
+        background: #CECECE
+        height: 70%
+        width: 1px
+        position: absolute
+        z-index: 2
+        right: -20%
+        top: 50%
+        transform: translateY(-50%)
+
+  &__title
+    margin-bottom: 23px
+
+  &__list
+
+    &:not(:last-of-type)
+      margin-bottom: 25px
+
+  ol
+    counter-reset: my-awesome-counter
+
+  ol li
+    counter-increment: my-awesome-counter
+
+  ol li::before
+    content: "" counter(my-awesome-counter)
+    color: $c-orange
+    font-family: 'DM Serif Display'
+    font-size: 20px
+    line-height: 125%
+    letter-spacing: 0.02em
+    margin-right: 18px
