@@ -1,15 +1,27 @@
 .work
   padding: 200px 0
 
+  @media (max-width: $sm)
+    padding: 100px 0
+
   &__container
     display: flex
     flex-wrap: wrap
+    justify-content: center
 
   &__text
     text-align: center
     background-color: $c-fullWhite
     width: calc( 100% / 3 - 84px / 3 )
     padding: 83px 20px
+
+    @media (max-width: $sm)
+      width: calc( 100% / 2 - 84px / 2 )
+      padding: 50px 20px
+
+    @media (max-width: $xs)
+      width: 100%
+      padding: 30px 20px
 
     &:hover
       background-color: $c-white
@@ -20,3 +32,9 @@
 
   &__desc
     margin-bottom: 52px
+
+    @media (max-width: $sm)
+      margin-bottom: 40px
+
+    @media (max-width: $xs)
+      margin-bottom: 30px

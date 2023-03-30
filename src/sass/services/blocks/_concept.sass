@@ -6,13 +6,25 @@
   &:not(:last-of-type)
     margin-bottom: 70px
 
+  @media (max-width: $md)
+    flex-wrap: wrap
+
   &__img
     border-radius: 0 123px 0 326px
+
+    @media (max-width: $md)
+      width: 100%
+
+    @media (max-width: $xs)
+      border-radius: 0
 
   &__icons
     display: flex
     justify-content: space-between
     margin-bottom: 60px
+
+    @media (max-width: $md)
+      margin-bottom: 20px
 
   &__number
     font-family: 'DM Serif Display'
@@ -23,3 +35,11 @@
 
   &__title
     margin-bottom: 9px
+
+  &__details
+
+    @media (max-width: $md)
+      order: -1
+
+    @media (max-width: $xs)
+      text-align: center
