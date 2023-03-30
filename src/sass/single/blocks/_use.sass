@@ -1,14 +1,28 @@
 .use
   padding-top: 150px
 
+  @media (max-width: $sm)
+    padding-top: 100px
+
   &__container
     display: flex
     justify-content: space-around
+
+    @media (max-width: $md)
+      justify-content: space-between
+
+    @media (max-width: $sm)
+      flex-wrap: wrap
+      justify-content: center
 
   &__text
     position: relative
 
     &:not(:last-of-type)
+
+      @media (max-width: $sm)
+        margin-bottom: 30px
+
       &::after
         content: ""
         background: #CECECE
@@ -20,13 +34,25 @@
         top: 50%
         transform: translateY(-50%)
 
+        @media (max-width: $md)
+          content: none
+
   &__title
     margin-bottom: 23px
+
+    @media (max-width: $xs)
+      font-size: 45px
 
   &__list
 
     &:not(:last-of-type)
       margin-bottom: 25px
+
+    @media (max-width: $md)
+      font-size: 19px
+
+    @media (max-width: $xs)
+      font-size: 15px
 
   ol
     counter-reset: my-awesome-counter
@@ -42,3 +68,6 @@
     line-height: 125%
     letter-spacing: 0.02em
     margin-right: 18px
+
+    @media (max-width: $xs)
+      margin-right: 9px

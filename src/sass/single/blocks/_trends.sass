@@ -1,21 +1,45 @@
 .trends
   padding-top: 200px
 
+  @media (max-width: $xs)
+    padding-top: 100px
+
   &__container
     display: flex
     justify-content: space-between
 
+    @media (max-width: $sm)
+      display: block
+
   &__title
     margin-right: 94px
+
+    @media (max-width: $sm)
+      text-align: center
+      margin-right: 0
+      margin-bottom: 25px
+
+    @media (max-width: $xs)
+      font-size: 38px
 
   &__subtitle
     font-size: 25px
     color: $c-orange
     margin-bottom: 30px
 
+    @media (max-width: $xs)
+      text-align: center
+      font-size: 20px
+
   &__text
     width: 129%
+
+    @media (max-width: $sm)
+      width: 100%
 
   &__desc
     &:not(:last-of-type)
       margin-bottom: 28px
+
+    @media (max-width: $xs)
+      font-size: 15px
