@@ -1,5 +1,17 @@
 ProjectTitle: interno
 
 PageList:
-- file: page.html
-  ready: 50
+  - file: home.html
+    ready: 50
+
+  - file: about-us.html
+    ready: 50
+
+  - file: services.html
+    ready: 50
+
+  - file: single.html
+    ready: 50
+
+  - file: prices.html
+    ready: 50

@@ -1,7 +1,12 @@
 .pricing-plan
   padding-top: 150px
 
+  &__container
+    display: flex
+    gap: 48px
+
   &__card
+    width: 100%
     padding: 64px 0
     background-color: $c-white
     border-radius: 33px
@@ -13,16 +18,41 @@
     justify-content: center
 
   &__desc
+    font-size: 20px
     &:not( :last-of-type)
       margin-bottom: 25px
 
-  &__month
-    margin-bottom: 37px
-
   &__line
-    margin-bottom: 28px
+    margin: 37px 0 28px 0
     border-top: 1px solid $c-orange
 
   &__button
     margin: 0 auto
     margin-top: 28px
+
+  &__orange-number
+    color: $c-orange
+
+  &__most
+    position: relative
+    z-index: 1
+
+  &__popular
+    color: $c-fullWhite
+    background-color: $c-black
+    padding: 10px 38px
+    width: max-content
+    margin: 0 auto
+    border-radius: 18px
+
+  &__black-line
+    border: 0
+    border-top: 1px solid $c-black
+    position: absolute
+    width: 100%
+    margin: 0
+    top: 50%
+    z-index: -1
+
+  &__most
+    margin: 15px 0 10px 0
