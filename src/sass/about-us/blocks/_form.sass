@@ -1,6 +1,6 @@
 .form
   text-align: center
-
+  
   &__button
     margin: 0 auto
 
@@ -10,6 +10,10 @@
   &__input
     border-bottom: 1px solid #000000
     width: 32%
+    transition: border-color .3s ease
+
+    &:focus
+      border-color: $c-orange
 
     &:not(:last-of-type)
       margin-right: 35px
@@ -26,6 +30,10 @@
     width: 68%
     height: 175px
     margin-bottom: 77px
+    transition: border-color .3s ease
+
+    &:focus
+      border-color: $c-orange
 
     @media (max-width: $xs)
       width: 99%

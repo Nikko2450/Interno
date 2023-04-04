@@ -28,23 +28,35 @@
       justify-content: center
 
   &__icon
+    transition: filter .3s ease
 
     &:not(:last-of-type)
       margin-right: 54px
+
+    &:hover
+      filter: invert(50%)
 
   &__title
     margin-bottom: 26px
 
   &__link
+    transition: color .3s ease
 
     &:not(:last-of-type)
       margin-bottom: 33px
+
+    &:hover
+      color: $c-orange
 
   &__address
     margin-bottom: 33px
 
   &__email
     margin-bottom: 33px
+    transition: color .3s ease
+
+    &:hover
+      color: $c-orange
 
   &__copyright
     text-align: center
@@ -67,3 +79,9 @@
       width: 100%
       text-align: center
       margin-bottom: 25px
+
+  &__number
+    transition: color .3s ease
+
+    &:hover
+      color: $c-orange

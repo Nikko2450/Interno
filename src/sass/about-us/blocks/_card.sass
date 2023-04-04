@@ -53,12 +53,21 @@
     display: flex
     justify-content: space-around
     margin: 66px 0
+    align-items: center
 
   &__number
     font-size: 18px
+    transition: color .3s ease
+
+    &:hover
+      color: $c-orange
 
   &__email
     font-size: 18px
+    transition: color .3s ease
+
+    &:hover
+      color: $c-orange
 
   &__back, &__front
     position: absolute
@@ -76,3 +85,9 @@
 
     @media (max-width: $sm)
       font-size: 17px
+
+  &__icon
+    transition: filter .3s ease
+
+    &:hover
+      filter: invert(50%)
