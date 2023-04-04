@@ -1,3 +1,8 @@
+import Filterizr from 'filterizr'
+
+const options = {layout: 'sameWidth'};
+const filterizr = new Filterizr('.gallery', options);
+
 document.addEventListener('DOMContentLoaded', () => {
   const videoWrapper = document.querySelector('.video__wrapper');
   const playButton = videoWrapper.querySelector('.video__play');
