@@ -2,10 +2,15 @@
   padding-top: 200px
 
   &__buttons
+    width: max-content
+    border: 1px solid $c-orange
     display: flex
     justify-content: center
+    margin: 0 auto
+    border-radius: 18px
 
     button
+      padding: 26px 66px
       font-family: 'Jost'
       font-style: normal
       font-weight: 600
@@ -13,3 +18,14 @@
       line-height: 125%
       color: $c-black
       background: 0
+      transition: color .5s ease-in-out
+
+  &__button
+    transition: background-color .5s ease-in-out
+    border-radius: 18px
+
+    &.active
+      background-color: $c-orange
+
+      button
+        color: $c-fullWhite

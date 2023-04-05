@@ -18,3 +18,9 @@ PageList:
 
   - file: our-project.html
     ready: 50
+
+  - file: minimal-bedroom.html
+    ready: 50
+
+  - file: our-professional.html
+    ready: 50
