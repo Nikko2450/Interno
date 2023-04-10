@@ -24,3 +24,6 @@ PageList:
 
   - file: our-professional.html
     ready: 50
+
+  - file: professional-single.html
+    ready: 50
