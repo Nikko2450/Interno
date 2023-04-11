@@ -1,0 +1,28 @@
+.modal
+  display: none
+  position: fixed
+  width: 100%
+  z-index: 100
+  top: 0
+  bottom: 0
+
+  &.is-open
+    display: block
+
+  &__button
+    padding: 10px 10px
+    position: absolute
+    z-index: 100
+    background-color: $c-fullWhite
+    right: 15px
+    top: 15px
+    border-radius: 50%
+    transition: background-color .3s ease
+    font-size: 0
+
+    img
+      width: 32px
+      height: 32px
+
+    &:hover
+      background-color: darken($c-fullWhite, 10%)
