@@ -1,0 +1,80 @@
+.acquaintance
+  padding: 200px 0 150px
+
+  &__title
+    text-align: center
+    margin-bottom: 80px
+
+  &__wrapper
+    display: flex
+    align-items: center
+    gap: 55px
+
+  &__info
+    padding: 72px 36px
+    background-color: $c-white
+    border-radius: 50px
+    align-items: center
+
+  &__networks
+    display: flex
+    align-items: center
+    width: max-content
+
+    &:not(:first-of-type)
+      margin-top: 30px
+
+  &__network
+    margin-right: 15px
+    background-color: $c-fullWhite
+    padding: 18px 15px 17px
+    border-radius: 42%
+
+  &__icons
+    margin-top: 47px
+
+  &__icon
+
+    &:not(:last-of-type)
+      margin-right: 35px
+
+  &__input
+    border-bottom: 1px solid #000000
+    width: 47%
+    padding-bottom: 13px
+    transition: border-color .3s ease
+
+    &:focus
+      border-color: $c-orange
+
+    &:nth-child(odd)
+      margin-right: 39px
+
+    &:nth-child(-n+2)
+      margin-bottom: 50px
+
+  &__registration
+    margin-bottom: 50px
+
+  &__textarea
+    resize: none
+    border-top: 0
+    border-right: 0
+    border-left: 0
+    border-bottom: 1px solid #000000
+    width: 99%
+    height: 175px
+    margin-bottom: 58px
+    transition: border-color .3s ease
+
+    &:focus
+      border-color: $c-orange
+
+  &__button
+    margin-left: auto
+
+  &__link
+    transition: color .3s ease
+
+    &:hover
+      color: $c-orange

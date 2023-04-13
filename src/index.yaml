@@ -27,3 +27,6 @@ PageList:
 
   - file: professional-single.html
     ready: 50
+
+  - file: contact-us.html
+    ready: 50
