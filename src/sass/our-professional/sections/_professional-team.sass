@@ -1,10 +1,19 @@
 .professional-team
   padding-top: 200px
 
+  @media (max-width: $sm)
+    padding-top: 100px
+
   &__container
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: 22px
+
+    @media (max-width: $sm)
+      grid-template-columns: repeat(2, 1fr)
+
+    @media (max-width: $xs)
+      grid-template-columns: none
 
   &__card
     text-align: center

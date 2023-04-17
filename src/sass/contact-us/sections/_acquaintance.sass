@@ -1,20 +1,33 @@
 .acquaintance
   padding: 200px 0 150px
 
+  @media (max-width: $sm)
+    padding: 100px 0 100px
+
   &__title
     text-align: center
     margin-bottom: 80px
+
+    @media (max-width: $xs)
+      font-size: 40px
 
   &__wrapper
     display: flex
     align-items: center
     gap: 55px
 
+    @media (max-width: $md)
+      flex-wrap: wrap
+      justify-content: center
+
   &__info
     padding: 72px 36px
     background-color: $c-white
     border-radius: 50px
     align-items: center
+
+    @media (max-width: $xs)
+      padding: 40px 10px
 
   &__networks
     display: flex
@@ -40,7 +53,7 @@
 
   &__input
     border-bottom: 1px solid #000000
-    width: 47%
+    width: 46%
     padding-bottom: 13px
     transition: border-color .3s ease
 
@@ -52,6 +65,12 @@
 
     &:nth-child(-n+2)
       margin-bottom: 50px
+
+    @media (max-width: $sm)
+      width: 45%
+
+    @media (max-width: $xs)
+      width: 42%
 
   &__registration
     margin-bottom: 50px
