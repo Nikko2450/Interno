@@ -1,0 +1,54 @@
+.accordion
+  width: 50%
+  $this: &
+
+  &__title
+    margin-bottom: 12px
+
+  &__desc
+    margin-bottom: 19px
+
+  &__block
+    margin-top: 30px
+    border: 1px solid $c-orange
+    border-radius: 18px
+    padding: 18px 14px
+
+  & &__trigger
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 125%
+    letter-spacing: 0.02em
+    color: $c-black
+
+    &:focus
+      color: $c-black
+
+  .ac .ac-panel .ac-text
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 400
+    font-size: 22px
+    line-height: 150%
+    letter-spacing: 0.01em
+    color: $c-grey
+
+  .ac.is-active
+    background-color: $c-white
+    border: 1px solid $c-white
+
+  .ac .ac-trigger::after
+    font-size: 35px
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 300
+    background-color: $c-white
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    line-height: 39px
+
+  .ac.is-active > .ac-header .ac-trigger::after
+    background-color: $c-fullWhite

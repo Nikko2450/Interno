@@ -1,5 +1,6 @@
 import Filterizr from 'filterizr';
 import Swiper, { Navigation, Pagination } from 'swiper';
+import Accordion from 'accordion-js';
 
 Swiper.use([Navigation, Pagination]);
 
@@ -60,19 +61,31 @@ if (document.querySelector('.swiper')) {
 }
 
 const toggleModal = () => {
-  const openModalButton = document.querySelector('.preview__button');
-  const modal = document.querySelector('.slider-modal');
-  const closeModalButton = document.querySelector('.modal__button');
+  if (document.querySelector('.preview__button')) {
+    const openModalButton = document.querySelector('.preview__button');
+    const modal = document.querySelector('.slider-modal');
+    const closeModalButton = document.querySelector('.modal__button');
 
-  openModalButton.addEventListener('click', () => {
-    modal.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  });
-  
-  closeModalButton.addEventListener('click', () => {
-    modal.classList.remove('is-open');
-    document.body.style.overflow = 'visible';
-  });
+    openModalButton.addEventListener('click', () => {
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeModalButton.addEventListener('click', () => {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = 'visible';
+    });
+  }
 }
 
-toggleModal()
+toggleModal();
+
+const initAccordion = () => {
+  const accordion = new Accordion('.accordion-container', {onOpen(currentElement) {
+    console.log(currentElement);
+  }});
+
+  console.log(accordion)
+}
+
+initAccordion();
