@@ -81,7 +81,7 @@ const toggleModal = () => {
 toggleModal();
 
 const initAccordion = () => {
-  const accordion = new Accordion('.accordion-container', {onOpen(currentElement) {
+  const accordion = new Accordion(['.accordion-container', '.container-second'], {onOpen(currentElement) {
     console.log(currentElement);
   }});
 
