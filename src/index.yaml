@@ -33,3 +33,6 @@ PageList:
 
   - file: faqs.html
     ready: 50
+
+  - file: not-found.html
+    ready: 50
