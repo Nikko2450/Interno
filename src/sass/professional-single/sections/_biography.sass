@@ -1,8 +1,14 @@
 .biography
   padding-bottom: 200px
 
+  @media (max-width: $sm)
+    padding-bottom: 100px
+
   &__title
     margin-bottom: 18px
+
+    @media (max-width: $md)
+      text-align: center
 
   &__subtitle
     margin-bottom: 50px
@@ -11,3 +17,7 @@
     margin-top: 45px
     display: flex
     gap: 95px
+
+    @media (max-width: $md)
+      justify-content: center
+      flex-wrap: wrap
