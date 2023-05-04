@@ -1,6 +1,9 @@
 .project-style
   padding-top: 200px
 
+  @media (max-width: $sm)
+    padding-top: 100px
+
   &__buttons
     width: max-content
     border: 1px solid $c-orange
@@ -8,6 +11,10 @@
     justify-content: center
     margin: 0 auto
     border-radius: 18px
+
+    @media (max-width: $md)
+      flex-direction: column
+      text-align: center
 
     button
       padding: 26px 66px
