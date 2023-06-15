@@ -1,9 +1,8 @@
 <section class="brand">
   <div class="brand__container container">
-    <img src="/img/brand/home.svg" alt="home" class="brand__img">
-    <img src="/img/brand/vs.svg" alt="vs" class="brand__img">
-    <img src="/img/brand/brand.svg" alt="brand" class="brand__img">
-    <img src="/img/brand/nature-home.svg" alt="nature-home" class="brand__img">
-    <img src="/img/brand/classic.svg" alt="classic" class="brand__img">
+    {% import "data/brand.html" as items %}
+    {% for item in items.icons %}
+      <img src="{{item.src}}" alt="{{item.alt}}" class="brand__img">
+    {% endfor %}
   </div>
 </section>

@@ -1,20 +1,11 @@
 <section class="counter">
   <div class="counter__container container">
-    <div class="counter__text">
-      <h2 class="counter__number display-1">12</h2>
-      <p class="counter__success paragraph">Years Of Experiance</p>
-    </div>
-    <div class="counter__text">
-      <h2 class="counter__number display-1">85</h2>
-      <p class="counter__success paragraph">Success Project</p>
-    </div>
-    <div class="counter__text">
-      <h2 class="counter__number display-1">15</h2>
-      <p class="counter__success paragraph">Active Project</p>
-    </div>
-    <div class="counter__text">
-      <h2 class="counter__number display-1">95</h2>
-      <p class="counter__success paragraph">Happy CUstomers</p>
-    </div>
+    {% import "data/counter.html" as items %}
+    {% for item in items.block %}
+      <div class="counter__text">
+        <h2 class="counter__number display-1">{{item.number}}</h2>
+        <p class="counter__success paragraph">{{item.desc}}</p>
+      </div>
+    {% endfor %}
   </div>
 </section>
