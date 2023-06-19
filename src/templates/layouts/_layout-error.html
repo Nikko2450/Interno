@@ -24,12 +24,10 @@
       <div class="nav__container container">  
         <a href="#" class="nav__logo"><img src="img/svgo/header-logo.svg" alt="logo"></a>
         <div class="nav__menu">
-          <a href="/home.html" class="nav__link">Home</a>
-          <a href="#" class="nav__link">Pages</a>
-          <a href="/services.html" class="nav__link">Services</a>
-          <a href="#" class="nav__link">Project</a>
-          <a href="#" class="nav__link">Blog</a>
-          <a href="#" class="nav__link">Contact</a>
+          {% import "data/menu.html" as items %}
+          {% for item in items.menu %}
+            <a href="{{item.href}}" class="nav__link">{{item.name}}</a>
+          {% endfor %}
           <a href="#" class="nav__icon"><img src="img/svgo/dandruff.svg" alt="dandruff"></a>
         </div>
       </div>
