@@ -4,50 +4,17 @@
     <div class="questions__wrapper">
         <img class="questions__img" src="/img/faqs/questions/questions-img-1.jpg" alt="questions">
         <div class="questions__accordion container-second">
-          <div class="questions__block ac">
-            <h2 class="questions__header ac-header">
-              <button type="button" class="questions__trigger ac-trigger">How long does it take?</button>
-            </h2>
-            <div class="questions__panel ac-panel">
-              <p class="questions__text ac-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief.There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
+          {% import "data/questions.html" as items %}
+          {% for item in items.block %}
+            <div class="questions__block ac">
+              <h2 class="questions__header ac-header">
+                <button type="button" class="questions__trigger ac-trigger">{{item.title}}</button>
+              </h2>
+              <div class="questions__panel ac-panel">
+                <p class="questions__text ac-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief.There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
+              </div>
             </div>
-          </div>
-        
-          <div class="questions__block ac">
-            <h2 class="questions__header ac-header">
-              <button type="button" class="questions__trigger ac-trigger">Can I use my existing furnishings?</button>
-            </h2>
-            <div class="questions__panel ac-panel">
-              <p class="questions__text ac-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief.There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
-            </div>
-          </div>
-        
-          <div class="questions__block ac">
-            <h2 class="questions__header ac-header">
-              <button type="button" class="questions__trigger ac-trigger">I put into redesigning my interior?</button>
-            </h2>
-            <div class="questions__panel ac-panel">
-              <p class="questions__text ac-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief.There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
-            </div>
-          </div>
-
-          <div class="questions__block ac">
-            <h2 class="questions__header ac-header">
-              <button type="button" class="questions__trigger ac-trigger">What do your services cost?</button>
-            </h2>
-            <div class="questions__panel ac-panel">
-              <p class="questions__text ac-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief.There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
-            </div>
-          </div>
-
-          <div class="questions__block ac">
-            <h2 class="questions__header ac-header">
-              <button type="button" class="questions__trigger ac-trigger">Do you offer free consultations?</button>
-            </h2>
-            <div class="questions__panel ac-panel">
-              <p class="questions__text ac-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief.There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
     </div>
   </div>
